@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intramurals Team Checker</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #ecc5e0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: white;
+            background-color: #e2b9d1;
+            padding: 10px;
+        }
+
+        select {
+            margin: 10px;
+            padding: 8px;
+            width: 160px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #d25caf;
+            color: white;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Intramurals Team Checker</h1>
+
+    <h2>Are you done with the online registration?</h2>
+    <input type="radio" name="registration" value="yes"> Yes
+    <br>
+    <input type="radio" name="registration" value="no"> No
+
+    <h2>Do you have medical clearance from the clinic?</h2>
+    <input type="radio" name="clearance" value="yes"> Yes
+    <br>
+    <input type="radio" name="clearance" value="no"> No
+
+    <h3>Grade Level</h3>
+    <select id="grade_level">
+        <option value="grade7">Grade 7</option>
+        <option value="grade8">Grade 8</option>
+        <option value="grade9">Grade 9</option>
+        <option value="grade10">Grade 10</option>
+        <option value="grade11">Grade 11</option>
+        <option value="grade12">Grade 12</option>
+    </select>
+
+    <h3>Section</h3>
+    <select id="section">
+        <option value="Emerald">Emerald</option>
+        <option value="Ruby">Ruby</option>
+        <option value="Sapphire">Sapphire</option>
+        <option value="Topaz">Topaz</option>
+    </select>
+
+    <br><br>
+
+    <button type="button" py-click="intrams_checker">
+        Submit
+    </button>
+
+    <div id="result"></div>
+
+    <!-- Load Python AFTER the page -->
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
+
